@@ -21,7 +21,6 @@ import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.Dp
 import androidx.compose.ui.unit.dp
 import com.jetpackcompose.codelap.week2.ui.theme.Week2Theme
-import kotlin.math.max
 
 @Composable
 fun StaggeredGrid(
@@ -49,7 +48,7 @@ fun StaggeredGrid(
             // Track the width and max height of each row
             val row = index % rows
             rowWidths[row] += placeable.width
-            rowHeights[row] = max(rowHeights[row], placeable.height)
+            rowHeights[row] = Math.max(rowHeights[row], placeable.height)
 
             placeable
         }
